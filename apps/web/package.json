@@ -1,0 +1,28 @@
+{
+  "name": "@figtest/web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web app of the platform (Next.js App Router): projects, Figma import, screens, repository, mocks, runs, reports.",
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start --port 3000",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf .next"
+  },
+  "dependencies": {
+    "@figtest/contracts": "workspace:*",
+    "@tanstack/react-query": "^5.80.0",
+    "clsx": "^2.1.1",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwind-merge": "^3.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

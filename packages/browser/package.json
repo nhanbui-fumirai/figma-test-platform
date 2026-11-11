@@ -1,0 +1,25 @@
+{
+  "name": "@figtest/browser",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser side of a test: launch, context (viewport, cookies, login state), URL policy (SSRF), steps interpreter, settle, auth-wall detection.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json -w --preserveWatchOutput",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@figtest/contracts": "workspace:*",
+    "playwright": "1.56.0"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.0"
+  }
+}

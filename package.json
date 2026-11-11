@@ -1,0 +1,23 @@
+{
+  "name": "figma-test-platform",
+  "private": true,
+  "description": "Compare websites with their Figma design: import, screens and URLs, mock data, Playwright runs, difference reports.",
+  "packageManager": "pnpm@10.25.0",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "db:up": "docker compose up -d postgres",
+    "db:migrate": "pnpm --filter @figtest/db migrate",
+    "clean": "turbo run clean && rimraf node_modules"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "rimraf": "^6.0.0",
+    "turbo": "^2.5.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

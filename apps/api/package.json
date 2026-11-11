@@ -1,0 +1,39 @@
+{
+  "name": "@figtest/api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "HTTP API of the platform (NestJS): auth, projects, jobs and their live logs (SSE). Long work goes to the worker through pg-boss.",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "nest build",
+    "dev": "nest start --watch --preserveWatchOutput",
+    "start": "node dist/main.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@figtest/contracts": "workspace:*",
+    "@figtest/core": "workspace:*",
+    "@figtest/db": "workspace:*",
+    "@figtest/figma": "workspace:*",
+    "@figtest/git": "workspace:*",
+    "@figtest/mocks": "workspace:*",
+    "@nestjs/common": "^11.1.0",
+    "@nestjs/core": "^11.1.0",
+    "@nestjs/platform-express": "^11.1.0",
+    "@node-rs/argon2": "^2.0.2",
+    "cookie-parser": "^1.4.7",
+    "multer": "^2.5.0",
+    "pg-boss": "^10.1.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.0",
+    "typeorm": "^0.3.20",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/express": "^5.0.0",
+    "@types/multer": "^2.0.0"
+  }
+}

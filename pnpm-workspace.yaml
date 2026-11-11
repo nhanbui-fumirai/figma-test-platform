@@ -1,0 +1,11 @@
+packages:
+  - apps/*
+  - packages/*
+
+# packages whose install scripts may run (pnpm 10 blocks the others)
+onlyBuiltDependencies:
+  - "@nestjs/core"
+  - "@swc/core"
+  - esbuild
+  - sharp
+  - unrs-resolver

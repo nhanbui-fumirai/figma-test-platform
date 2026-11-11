@@ -1,0 +1,26 @@
+{
+  "name": "@figtest/db",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PostgreSQL access shared by the api and the worker: TypeORM DataSource, entities, migrations, the job store.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json -w --preserveWatchOutput",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "migrate": "node dist/migrate.js",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@figtest/core": "workspace:*",
+    "pg": "^8.16.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.0"
+  }
+}

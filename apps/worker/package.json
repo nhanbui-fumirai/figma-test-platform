@@ -1,0 +1,36 @@
+{
+  "name": "@figtest/worker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Runs the long jobs of the platform from their pg-boss queues (import, render, record, AI, test runs). Several workers can share the queues.",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "nest build",
+    "dev": "nest start --watch --preserveWatchOutput --exec \"node --max-old-space-size=8192\"",
+    "start": "node --max-old-space-size=8192 dist/main.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@figtest/ai": "workspace:*",
+    "@figtest/browser": "workspace:*",
+    "@figtest/compare": "workspace:*",
+    "@figtest/contracts": "workspace:*",
+    "@figtest/core": "workspace:*",
+    "@figtest/db": "workspace:*",
+    "@figtest/figma": "workspace:*",
+    "@figtest/git": "workspace:*",
+    "@figtest/mocks": "workspace:*",
+    "@nestjs/common": "^11.1.0",
+    "@nestjs/core": "^11.1.0",
+    "pg-boss": "^10.1.0",
+    "playwright": "1.56.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.0",
+    "typeorm": "^0.3.20",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0"
+  }
+}

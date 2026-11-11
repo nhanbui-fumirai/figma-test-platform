@@ -1,0 +1,26 @@
+{
+  "name": "@figtest/ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI providers (Anthropic, OpenRouter) with structured JSON output and repair, and the two prepare tasks: steps and mock ops.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json -w --preserveWatchOutput",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.7.0",
+    "@figtest/contracts": "workspace:*",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.0"
+  }
+}

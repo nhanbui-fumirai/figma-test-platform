@@ -1,0 +1,26 @@
+{
+  "name": "@figtest/compare",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Compare engine: DOM collector (page script), matcher and scoring of a design spec against a page.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json -w --preserveWatchOutput",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@figtest/contracts": "workspace:*",
+    "@figtest/figma": "workspace:*"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.0",
+    "playwright": "1.56.0"
+  }
+}

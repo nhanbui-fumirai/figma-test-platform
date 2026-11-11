@@ -1,0 +1,28 @@
+node_modules/
+dist/
+.next/
+.next-*/
+.turbo/
+coverage/
+*.tsbuildinfo
+
+# local settings and secrets
+.env
+.env.*
+!.env.example
+
+# platform data (uploads, images, reports, git repos)
+storage/
+
+# Figma files: big and may be confidential
+*.fig
+
+# Playwright
+test-results/
+playwright-report/
+
+.DS_Store
+Thumbs.db
+
+# local SQL with passwords (db-setup.local.sql)
+*.local.sql

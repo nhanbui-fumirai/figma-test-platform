@@ -1,0 +1,26 @@
+{
+  "name": "@figtest/mocks",
+  "version": "0.1.0",
+  "private": true,
+  "description": "API mocks: recorder, replay matcher (GraphQL closest variables, REST near-match), ops + guards, MSW / Storybook export.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json -w --preserveWatchOutput",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@figtest/contracts": "workspace:*",
+    "jszip": "^3.10.1",
+    "playwright": "1.56.0"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.0"
+  }
+}

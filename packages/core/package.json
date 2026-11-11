@@ -1,0 +1,21 @@
+{
+  "name": "@figtest/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared runtime pieces of the api and the worker: env config, logger with secret redaction, crypto, blob storage, queue payloads.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json -w --preserveWatchOutput",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.0",
+    "pino": "^9.7.0",
+    "zod": "^4.1.0"
+  }
+}

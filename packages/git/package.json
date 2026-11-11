@@ -1,0 +1,22 @@
+{
+  "name": "@figtest/git",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Read-only git: bare shallow clone/fetch with the token in env config only, push disabled, tree and file reads.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json -w --preserveWatchOutput",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vitest": "^3.2.0"
+  }
+}
